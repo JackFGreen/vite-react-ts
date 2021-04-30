@@ -6,7 +6,9 @@
     "build": "tsc && vite build",
     "serve": "vite preview",
     "lint:script": "eslint 'src/**/*.{ts,tsx}'",
-    "fix:script": "eslint 'src/**/*.{ts,tsx}' --fix"
+    "fix:script": "eslint 'src/**/*.{ts,tsx}' --fix",
+    "lint:style": "stylelint 'src/**/*.{css,less}'",
+    "fix:style": "stylelint 'src/**/*.{css,less}' --fix"
   },
   "dependencies": {
     "@jackgreen/react-router-view": "^1.2.1",
@@ -48,7 +50,10 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "less": "^4.1.1",
     "prettier": "^2.2.1",
-    "stylelint-config-standard": "^20.0.0",
+    "stylelint": "^13.13.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-prettier": "^1.2.0",
     "typescript": "^4.2.4",
     "vite": "^2.2.3",
     "vite-plugin-imp": "^2.0.7"
