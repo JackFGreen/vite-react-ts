@@ -8,7 +8,8 @@
     "lint:script": "eslint 'src/**/*.{ts,tsx}'",
     "fix:script": "eslint 'src/**/*.{ts,tsx}' --fix",
     "lint:style": "stylelint 'src/**/*.{css,less}'",
-    "fix:style": "stylelint 'src/**/*.{css,less}' --fix"
+    "fix:style": "stylelint 'src/**/*.{css,less}' --fix",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@jackgreen/react-router-view": "^1.2.1",
@@ -48,7 +49,9 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^6.0.0",
     "less": "^4.1.1",
+    "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "stylelint": "^13.13.0",
     "stylelint-config-prettier": "^8.0.2",
