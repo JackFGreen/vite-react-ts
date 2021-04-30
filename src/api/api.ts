@@ -1,13 +1,13 @@
 /**
  * 接口实例方法，相关配置
  */
-import {message} from 'antd';
+import { message } from 'antd'
 
-import Ajax from './Ajax';
+import Ajax from './Ajax'
 
 // mock api data
 // import '../mock';
-const localhost = '';
+const localhost = ''
 
 // charles debug test env
 // const localhost = 'https://api-test.com';
@@ -16,18 +16,21 @@ const localhost = '';
 // const localhost = `http://localhost:${import.meta.env.REACT_APP_PORT as string}`;
 
 export const ajax = new Ajax({
-	host: import.meta.env.REACT_APP_RUNTIME_ENV === 'local' ? localhost : import.meta.env.REACT_APP_API_HOST as string,
-	headers: {
-		'Content-Type': 'application/json',
-	},
-	credentials: 'include',
-	httpCodeHandler: {
-		401: async response => {
-			const res = await response.json();
-			console.error(res)
-		}
-	}
-});
+  host:
+    import.meta.env.REACT_APP_RUNTIME_ENV === 'local'
+      ? localhost
+      : (import.meta.env.REACT_APP_API_HOST as string),
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  credentials: 'include',
+  httpCodeHandler: {
+    401: async response => {
+      const res = await response.json()
+      console.error(res)
+    }
+  }
+})
 
 /**
  * 接口数据 code 处理
@@ -61,28 +64,28 @@ export const ajax = new Ajax({
  * })
  */
 export function handleApiCode(
-	res: {code: number; message: string},
-	opt: {
-		success?: () => unknown;
-		fail?: Record<number | string, () => unknown>;
-		error?: boolean | (() => unknown);
-	}
+  res: { code: number; message: string },
+  opt: {
+    success?: () => unknown
+    fail?: Record<number | string, () => unknown>
+    error?: boolean | (() => unknown)
+  }
 ): unknown {
-	if (!(opt instanceof Object)) return;
+  if (!(opt instanceof Object)) return
 
-	const {code} = res;
-	if (code === 200 && typeof opt.success === 'function') return opt.success();
+  const { code } = res
+  if (code === 200 && typeof opt.success === 'function') return opt.success()
 
-	if (typeof opt.fail === 'object') {
-		const handler = opt.fail[code];
-		if (typeof handler === 'function') return handler();
-	}
+  if (typeof opt.fail === 'object') {
+    const handler = opt.fail[code]
+    if (typeof handler === 'function') return handler()
+  }
 
-	if (typeof opt.error === 'function') {
-		return opt.error();
-	}
+  if (typeof opt.error === 'function') {
+    return opt.error()
+  }
 
-	if (typeof opt.error !== 'boolean') opt.error = true;
-	// eslint-disable-next-line @typescript-eslint/no-floating-promises
-	if (opt.error) message.error(res.message);
+  if (typeof opt.error !== 'boolean') opt.error = true
+  // eslint-disable-next-line @typescript-eslint/no-floating-promises
+  if (opt.error) message.error(res.message)
 }

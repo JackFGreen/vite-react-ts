@@ -1,7 +1,7 @@
-import Mock from 'mockjs';
+import Mock from 'mockjs'
 
 const data = Mock.mock({
-	demo: 'demo'
-});
+  demo: 'demo'
+})
 
-export default data;
+export default data

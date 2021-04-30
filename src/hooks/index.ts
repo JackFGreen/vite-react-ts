@@ -1,4 +1,4 @@
-import useCustomEventListener from './useCustomEventListener';
-import useDebounce from './useDebounce';
+import useCustomEventListener from './useCustomEventListener'
+import useDebounce from './useDebounce'
 
-export {useCustomEventListener, useDebounce};
+export { useCustomEventListener, useDebounce }

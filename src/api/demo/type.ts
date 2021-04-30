@@ -1,25 +1,25 @@
-import {PaginationReq, PaginationRes, ResData} from '../type';
+import { PaginationReq, PaginationRes, ResData } from '../type'
 
 /**
  * demo
  */
 export interface DemoReq {
-	demo: string;
+  demo: string
 }
 export interface DemoData {
-	demo: string;
+  demo: string
 }
 // response with data
-export type DemoRes = ResData<DemoData>;
+export type DemoRes = ResData<DemoData>
 // response without data
-export type DemoResWithOutData = ResData<null>;
+export type DemoResWithOutData = ResData<null>
 
 // request with pagination params
 export interface DemoReqWithPagination extends PaginationReq {
-	demo: string;
+  demo: string
 }
 // response with pagination data
 export interface DemoDataWithPagination extends PaginationRes {
-	demo: string;
+  demo: string
 }
-export type DemoResWithPagination = ResData<DemoDataWithPagination>;
+export type DemoResWithPagination = ResData<DemoDataWithPagination>
