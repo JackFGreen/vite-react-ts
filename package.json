@@ -9,6 +9,8 @@
     "fix:script": "eslint 'src/**/*.{ts,tsx}' --fix",
     "lint:style": "stylelint 'src/**/*.{css,less}'",
     "fix:style": "stylelint 'src/**/*.{css,less}' --fix",
+    "lint": "npm run lint:style && npm run lint:script",
+    "fix": "npm run fix:style && npm run fix:script",
     "prepare": "husky install"
   },
   "dependencies": {
