@@ -1,5 +1,5 @@
 /* eslint-disable */
-import Mock from 'fetch-mock';
+import Mock from 'fetch-mock/esm/client';
 import {DEMO_URL} from 'src/api/urls';
 import demoData from './model/demoData';
 

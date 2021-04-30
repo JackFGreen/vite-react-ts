@@ -6,7 +6,7 @@ import { message } from 'antd'
 import Ajax from './Ajax'
 
 // mock api data
-// import '../mock';
+import '../mock'
 const localhost = ''
 
 // charles debug test env
