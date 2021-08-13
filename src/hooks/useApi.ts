@@ -69,7 +69,7 @@ function useApi<T extends ApiFn>(props: UseApiProps<T>): UseApi<T> {
 
   useEffect(() => {
     if (auto) {
-      fetchData().catch(err => {
+      fetchData().catch((err) => {
         throw err
       })
     }

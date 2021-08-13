@@ -10,7 +10,7 @@ export interface UseHistoryBlockProps {
 const useHistoryBlock = (props: UseHistoryBlockProps): void => {
   const history = useHistory()
 
-  const unblock = history.block(location => {
+  const unblock = history.block((location) => {
     const match = matchPath(location.pathname, props.matchPath)
     if (match != null) {
       if (typeof props.handler === 'function') props.handler()

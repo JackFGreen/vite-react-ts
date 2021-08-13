@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect } from 'react'
 import { getDemoWithOutParams, handleApiCode } from 'src/api'
+import styles from './index.module.less'
 
 interface DemoPageProps {
   demo: string
@@ -23,12 +24,12 @@ function DemoPage(props: DemoPageProps): JSX.Element {
   }, [])
 
   useEffect(() => {
-    fetchData().catch(err => {
+    fetchData().catch((err) => {
       throw err
     })
   }, [fetchData])
 
-  return <div>DemoPage</div>
+  return <div className={styles.demo}>DemoPage</div>
 }
 
 export default DemoPage

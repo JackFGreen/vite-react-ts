@@ -25,7 +25,7 @@ export const ajax = new Ajax({
   },
   credentials: 'include',
   httpCodeHandler: {
-    401: async response => {
+    401: async (response) => {
       const res = await response.json()
       console.error(res)
     }
