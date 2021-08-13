@@ -8,11 +8,11 @@ module.exports = {
   trailingComma: 'none',
   bracketSpacing: true,
   jsxBracketSameLine: false,
-  arrowParens: 'avoid',
+  arrowParens: 'always',
   rangeStart: 0,
   requirePragma: false,
   insertPragma: false,
   proseWrap: 'preserve',
   htmlWhitespaceSensitivity: 'css',
-  endOfLine: 'auto'
+  endOfLine: 'lf'
 }
