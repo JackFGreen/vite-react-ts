@@ -1,4 +1,4 @@
 module.exports = {
-  '*/**/*.{vue,htm,html,css,sss,less,scss,sass}': ['npm run lint:style'],
-  '*/**/*.{ts,tsx}': ['npm run lint:script']
+  '*.{vue,htm,html,css,sss,less,scss,sass}': ['npm run fix:style', 'npm run prettier'],
+  '*.{ts,tsx}': ['npm run fix:script', 'npm run prettier']
 }

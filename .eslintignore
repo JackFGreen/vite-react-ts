@@ -1,2 +1,3 @@
 .*rc.js
 vite.config.ts
+dist
