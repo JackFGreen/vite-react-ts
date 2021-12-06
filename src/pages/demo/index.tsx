@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect } from 'react'
 import { getDemoWithOutParams, handleApiCode } from 'src/api'
+import InfiniteSelect from './InfiniteSelect'
 import styles from './index.module.less'
 
 interface DemoPageProps {
@@ -29,7 +30,12 @@ function DemoPage(props: DemoPageProps): JSX.Element {
     })
   }, [fetchData])
 
-  return <div className={styles.demo}>DemoPage</div>
+  return (
+    <div className={styles.demo}>
+      DemoPage
+      <InfiniteSelect />
+    </div>
+  )
 }
 
 export default DemoPage
