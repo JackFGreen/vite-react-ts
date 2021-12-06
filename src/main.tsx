@@ -6,7 +6,7 @@ import zhCN from 'antd/es/locale/zh_CN'
 import App from './App'
 
 // eslint-disable-next-line
-const RootApp: React.FC<any> = props => (
+const RootApp: React.FC<any> = (props) => (
   <ConfigProvider locale={zhCN}>
     {/* 添加 basename 兼容 [qiankun] 子应用 */}
     <BrowserRouter basename={`/${import.meta.env.VITE_APP_NAME as string}`}>
